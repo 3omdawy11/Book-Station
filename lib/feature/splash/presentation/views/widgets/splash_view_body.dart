@@ -30,7 +30,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AssetsData.logo),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50),
+          child: Image.asset(AssetsData.logo,fit: BoxFit.fitWidth,),
+        ),
+        const SizedBox(
+          height: 15,
+        ),
         SlidingText(slideAnimation: slideAnimation)
       ],
     );
@@ -48,7 +54,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       duration: const Duration(seconds: 2),
     );
     slideAnimation =
-        Tween<Offset>(begin: const Offset(0, 20), end: const Offset(0, -4))
+        Tween<Offset>(begin: const Offset(0, 20), end: const Offset(0, 0))
             .animate(animationController);
     animationController.forward();
   }

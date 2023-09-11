@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'constants.dart';
 import 'feature/splash/presentation/views/splash_view.dart';
 
@@ -11,7 +12,12 @@ class BookStation extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData().copyWith(
+      theme: ThemeData.dark().copyWith(
+        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+        appBarTheme: const AppBarTheme().copyWith(
+          backgroundColor: kScaffoldBackGroundColor,
+          elevation: 0
+        ),
         scaffoldBackgroundColor: kScaffoldBackGroundColor
       ),
       home: const SplashView(),

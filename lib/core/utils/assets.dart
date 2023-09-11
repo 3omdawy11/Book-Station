@@ -1,3 +1,4 @@
 class AssetsData{
-  static const logo = 'assets/images/Book Station.png';
+  static const logo = 'assets/images/Logo.png';
+  static const image1 = 'assets/images/test_image.png';
 }
