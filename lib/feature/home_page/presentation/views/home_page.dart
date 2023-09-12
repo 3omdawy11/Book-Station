@@ -1,4 +1,6 @@
 import 'package:book_station/core/utils/fonts.dart';
+import 'package:book_station/feature/home_page/presentation/views/widgets/best_seller_item.dart';
+import 'package:book_station/feature/home_page/presentation/views/widgets/best_seller_list.dart';
 import 'package:book_station/feature/home_page/presentation/views/widgets/featured_list.dart';
 import 'package:book_station/feature/home_page/presentation/views/widgets/app_bar.dart';
 import 'package:book_station/feature/home_page/presentation/views/widgets/medium_text.dart';
@@ -18,7 +20,9 @@ class HomePage extends StatelessWidget {
             children: [
               HomePageAppBar(),
               FeaturedList(),
-              MediumText()
+              MediumText(),
+              //BestSellerItem(),
+              BestSellerList()
             ],
           ),
         ),

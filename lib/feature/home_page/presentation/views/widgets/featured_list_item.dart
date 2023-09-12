@@ -9,7 +9,7 @@ class HomePageListBookItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 18),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.35,
+        //height: MediaQuery.of(context).size.height * 0.35,
         child: AspectRatio(
           aspectRatio: 2.8/4,
           child: Container(

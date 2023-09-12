@@ -10,8 +10,8 @@ class MediumText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(top: 43),
-      child: Text('Best Seller',style: Fonts.mediumStyle,),
+      padding: EdgeInsets.only(top: 43,bottom: 18),
+      child: Text('Best Seller',style: Fonts.textStyle18,),
     );
   }
 }

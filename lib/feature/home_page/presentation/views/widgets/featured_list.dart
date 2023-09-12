@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'list_item.dart';
+import 'featured_list_item.dart';
 class FeaturedList extends StatelessWidget {
   const FeaturedList({
     super.key,
@@ -9,7 +9,7 @@ class FeaturedList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height*0.33,
+      height: MediaQuery.of(context).size.height*0.28,
       child: ListView.builder(
         itemCount: 4,
         scrollDirection: Axis.horizontal,
