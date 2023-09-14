@@ -1,5 +1,6 @@
+import 'package:book_station/core/utils/router.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'constants.dart';
 import 'feature/splash/presentation/views/splash_view.dart';
@@ -10,7 +11,8 @@ class BookStation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
@@ -20,7 +22,6 @@ class BookStation extends StatelessWidget {
         ),
         scaffoldBackgroundColor: kScaffoldBackGroundColor
       ),
-      home: const SplashView(),
     );
   }
 }
