@@ -1,4 +1,4 @@
-import 'package:book_station/core/utils/fonts.dart';
+import 'package:book_station/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 class SlidingText extends StatelessWidget {
   const SlidingText({
@@ -18,7 +18,7 @@ class SlidingText extends StatelessWidget {
           child: const Text(
             'Elevate Your Knowledge',
             textAlign: TextAlign.center,
-            style: Fonts.textStyle18,
+            style: styles.textStyle18,
           ),
         );
       },

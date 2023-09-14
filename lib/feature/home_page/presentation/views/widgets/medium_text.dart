@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/fonts.dart';
+import '../../../../../core/utils/styles.dart';
 
 
 class MediumText extends StatelessWidget {
@@ -10,8 +10,8 @@ class MediumText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(top: 43,bottom: 18),
-      child: Text('Best Seller',style: Fonts.textStyle18,),
+      padding: EdgeInsets.only(top: 51,bottom: 20),
+      child: Text('Best Seller',style: styles.textStyle18,),
     );
   }
 }

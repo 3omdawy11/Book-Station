@@ -1,5 +1,3 @@
-import 'package:book_station/core/utils/fonts.dart';
-import 'package:book_station/feature/home_page/presentation/views/widgets/best_seller_item.dart';
 import 'package:book_station/feature/home_page/presentation/views/widgets/best_seller_list.dart';
 import 'package:book_station/feature/home_page/presentation/views/widgets/featured_list.dart';
 import 'package:book_station/feature/home_page/presentation/views/widgets/app_bar.dart';
@@ -12,26 +10,26 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(left: 20),
-        child: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              HomePageAppBar(),
-              FeaturedList(),
-              MediumText(),
-              //BestSellerItem(),
-              BestSellerList()
-            ],
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.only(left: 30),
+              child: SafeArea(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    HomePageAppBar(),
+                    FeaturedList(),
+                    MediumText(),
+                    BestSellerList()
+                  ],
+                ),
+              ),
+            ),
           ),
-        ),
+        ], // Sliver
       ),
     );
   }
 }
-
-
-
-
-

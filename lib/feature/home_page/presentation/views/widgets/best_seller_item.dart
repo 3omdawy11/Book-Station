@@ -1,5 +1,5 @@
 import 'package:book_station/core/utils/assets.dart';
-import 'package:book_station/core/utils/fonts.dart';
+import 'package:book_station/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerItem extends StatelessWidget {
@@ -8,7 +8,7 @@ class BestSellerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(bottom: 20, right: 35),
+      padding: EdgeInsets.only(bottom: 20, right: 47),
       child: Row(
         children: [BookPicture(), BookDescription()],
       ),
@@ -23,45 +23,25 @@ class BookDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return const Expanded(
       child: Padding(
-        padding: const EdgeInsets.only(left: 40),
+        padding: EdgeInsets.only(left: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Harry Potter and the Goblet of Fire', // Title
-              style: Fonts.textStyle20,
+            BookName(),
+            SizedBox(
+              height: 3,
             ),
-            const SizedBox(
-              height: 5,
-            ),
-            Text(
-              'J.K. Rowling', // Author
-              style: Fonts.textStyle14.copyWith(color: Colors.grey),
+            BookAuthor(),
+            SizedBox(
+              height: 3,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  '19.99 €', // Price
-                  style: Fonts.textStyle18.copyWith(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Text(
-                      '⭐4.8 ', // Rating
-                      style: Fonts.textStyle18.copyWith(fontSize: 16),
-                    ),
-                    Text(
-                      '(2390)', // No. of rates
-                      style: Fonts.textStyle14.copyWith(color: Colors.grey),
-                    )
-                  ],
-                )
+                BookPrice(),
+                BookRating(),
               ],
             )
           ],
@@ -87,9 +67,82 @@ class BookPicture extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               color: Colors.red,
               image:
-                  const DecorationImage(image: AssetImage(AssetsData.image2))),
+              const DecorationImage(image: AssetImage(AssetsData.image2))),
         ),
       ),
     );
   }
 }
+
+
+class BookName extends StatelessWidget {
+  const BookName({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      'Harry Potter and the Goblet Fire', // Title
+      style: styles.textStyle20,
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis
+    );
+  }
+}
+
+class BookAuthor extends StatelessWidget {
+  const BookAuthor({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      'J.K. Rowling', // Author
+      style: styles.textStyle14.copyWith(color: Colors.grey),
+    );
+  }
+}
+
+class BookPrice extends StatelessWidget {
+  const BookPrice({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      '19.99 €', // Price
+      style: styles.textStyle18.copyWith(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+}
+
+class BookRating extends StatelessWidget {
+  const BookRating({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Text(
+          '⭐4.8 ', // Rating
+          style: styles.textStyle18.copyWith(fontSize: 16),
+        ),
+        Text(
+          '(2390)', // No. of rates
+          style: styles.textStyle14.copyWith(color: Colors.grey),
+        )
+      ],
+    );
+  }
+}
+
+
+
