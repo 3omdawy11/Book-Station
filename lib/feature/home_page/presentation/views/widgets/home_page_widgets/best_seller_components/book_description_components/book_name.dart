@@ -9,7 +9,7 @@ class BookName extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Text(
         'Harry Potter and the Goblet Fire', // Title
-        style: styles.textStyle20,
+        style: Styles.textStyle20,
         maxLines: 2,
         overflow: TextOverflow.ellipsis
     );

@@ -8,14 +8,15 @@ class BookRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           '⭐4.8 ', // Rating
-          style: styles.textStyle18.copyWith(fontSize: 16),
+          style: Styles.textStyle18.copyWith(fontSize: 16),
         ),
         Text(
           '(2390)', // No. of rates
-          style: styles.textStyle14.copyWith(color: Colors.grey),
+          style: Styles.textStyle14.copyWith(color: Colors.grey),
         )
       ],
     );

@@ -18,7 +18,7 @@ class SlidingText extends StatelessWidget {
           child: const Text(
             'Elevate Your Knowledge',
             textAlign: TextAlign.center,
-            style: styles.textStyle18,
+            style: Styles.textStyle18,
           ),
         );
       },

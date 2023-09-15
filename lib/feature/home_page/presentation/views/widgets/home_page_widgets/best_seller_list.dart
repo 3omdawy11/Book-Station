@@ -1,4 +1,4 @@
-import 'package:book_station/feature/home_page/presentation/views/widgets/best_seller_list_item.dart';
+import 'package:book_station/feature/home_page/presentation/views/widgets/home_page_widgets/best_seller_list_item.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerList extends StatelessWidget {

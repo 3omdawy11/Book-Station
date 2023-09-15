@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'app_bar.dart';
+import 'home_page_app_bar.dart';
 import 'best_seller_list.dart';
 import 'featured_list.dart';
 import 'medium_text.dart';
