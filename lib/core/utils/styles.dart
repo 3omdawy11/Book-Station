@@ -13,4 +13,9 @@ abstract class Styles{
      fontSize: 14,
      fontWeight: FontWeight.w600,
    );
+   static const textStyle16 = TextStyle(
+     fontSize: 16,
+     fontWeight: FontWeight.bold,
+     fontFamily: 'Gilroy',
+   );
 }

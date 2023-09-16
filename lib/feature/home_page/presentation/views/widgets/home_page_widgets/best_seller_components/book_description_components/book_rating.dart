@@ -15,7 +15,7 @@ class BookRating extends StatelessWidget {
           style: Styles.textStyle18.copyWith(fontSize: 16),
         ),
         Text(
-          '(2390)', // No. of rates
+          ' (2390)', // No. of rates
           style: Styles.textStyle14.copyWith(color: Colors.grey),
         )
       ],

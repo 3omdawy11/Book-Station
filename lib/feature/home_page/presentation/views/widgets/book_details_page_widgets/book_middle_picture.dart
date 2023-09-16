@@ -11,9 +11,9 @@ class BookMiddlePicture extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 30),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.31,
+        height: MediaQuery.of(context).size.height * 0.27,
         child: AspectRatio(
-          aspectRatio: 2.85 / 4,
+          aspectRatio: 3 / 4,
           child: Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),

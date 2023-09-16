@@ -1,16 +1,14 @@
-import 'package:book_station/core/utils/assets.dart';
-import 'package:book_station/core/utils/router.dart';
+import 'package:book_station/constants.dart';
 import 'package:book_station/core/utils/styles.dart';
+import 'package:book_station/feature/home_page/presentation/views/widgets/book_details_page_widgets/book_author.dart';
+import 'package:book_station/feature/home_page/presentation/views/widgets/book_details_page_widgets/book_details_view_middle_button.dart';
 import 'package:book_station/feature/home_page/presentation/views/widgets/book_details_page_widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import '../home_page_widgets/best_seller_components/book_description_components/book_author.dart';
 import '../home_page_widgets/best_seller_components/book_description_components/book_rating.dart';
 import 'book_name.dart';
 import 'book_middle_picture.dart';
 import 'bottom_list.dart';
 import 'bottom_list_header.dart';
-import 'bottom_list_item.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -27,13 +25,18 @@ class BookDetailsViewBody extends StatelessWidget {
             SizedBox(
               height: 6,
             ),
-            BookAuthor(),
+            BookDetailsViewBookAuthor(),
             SizedBox(
               height: 16,
             ),
+            //BookRating(),
             BookRating(),
             SizedBox(
-              height: 40,
+              height: 20,
+            ),
+            BookDetailViewMiddleButton(),
+            SizedBox(
+              height: 20,
             ),
             BottomListHeader(),
             BottomList(),
@@ -43,3 +46,4 @@ class BookDetailsViewBody extends StatelessWidget {
     );
   }
 }
+
