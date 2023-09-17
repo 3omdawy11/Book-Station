@@ -17,30 +17,35 @@ class BookDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            CustomAppBar(),
-            BookMiddlePicture(),
-            BookName(),
-            SizedBox(
-              height: 6,
-            ),
-            BookDetailsViewBookAuthor(),
-            SizedBox(
-              height: 16,
-            ),
-            //BookRating(),
-            BookRating(),
-            SizedBox(
-              height: 20,
-            ),
-            BookDetailViewMiddleButton(),
-            SizedBox(
-              height: 20,
-            ),
-            BottomListHeader(),
-            BottomList(),
-          ],
+        child: Padding(
+          padding: EdgeInsets.only(bottom: 20),
+          child: Column(
+            children: [
+              CustomAppBar(),
+              BookMiddlePicture(),
+              BookName(),
+              SizedBox(
+                height: 6,
+              ),
+              BookDetailsViewBookAuthor(),
+              SizedBox(
+                height: 16,
+              ),
+              //BookRating(),
+              BookRating(),
+              SizedBox(
+                height: 20,
+              ),
+              BookDetailViewMiddleButton(),
+              Expanded(
+                child: SizedBox(
+                  height: 20,
+                ),
+              ),
+              BottomListHeader(),
+              BottomList(),
+            ],
+          ),
         ),
       ),
     );
