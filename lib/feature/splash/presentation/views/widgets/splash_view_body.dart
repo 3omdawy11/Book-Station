@@ -22,8 +22,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
     navigateHome();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -32,7 +30,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 50),
-          child: Image.asset(AssetsData.logo,fit: BoxFit.fitWidth,),
+          child: Image.asset(
+            AssetsData.logo,
+            fit: BoxFit.fitWidth,
+          ),
         ),
         const SizedBox(
           height: 15,
@@ -47,8 +48,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     animationController.dispose();
   }
 
-
-  void initSlideAnimation(){
+  void initSlideAnimation() {
     animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
@@ -58,7 +58,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
             .animate(animationController);
     animationController.forward();
   }
-
 
   void navigateHome() {
     Future.delayed(const Duration(seconds: 3), () {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:book_station/core/utils/assets.dart';
+
 class BookPicture extends StatelessWidget {
   const BookPicture({
     super.key,
@@ -16,7 +17,7 @@ class BookPicture extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               color: Colors.red,
               image:
-              const DecorationImage(image: AssetImage(AssetsData.image2))),
+                  const DecorationImage(image: AssetImage(AssetsData.image2))),
         ),
       ),
     );

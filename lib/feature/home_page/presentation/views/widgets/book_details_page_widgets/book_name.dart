@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/styles.dart';
+
 class BookName extends StatelessWidget {
   const BookName({
     super.key,

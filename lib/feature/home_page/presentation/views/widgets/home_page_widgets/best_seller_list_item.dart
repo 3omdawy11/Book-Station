@@ -5,8 +5,6 @@ import 'package:go_router/go_router.dart';
 import 'best_seller_components/book_description_body.dart';
 import 'best_seller_components/book_picture.dart';
 
-
-
 class BookListViewItem extends StatelessWidget {
   const BookListViewItem({super.key});
 
@@ -15,7 +13,7 @@ class BookListViewItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20, right: 47),
       child: GestureDetector(
-        onTap: (){
+        onTap: () {
           GoRouter.of(context).push(AppRouter.kBookDetailScreen);
         },
         child: const Row(
@@ -25,17 +23,3 @@ class BookListViewItem extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

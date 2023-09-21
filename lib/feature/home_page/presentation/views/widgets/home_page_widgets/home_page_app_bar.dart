@@ -13,7 +13,7 @@ class HomePageAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20,top: 15,bottom: 5),
+      padding: const EdgeInsets.only(right: 20, top: 15, bottom: 5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -28,7 +28,6 @@ class HomePageAppBar extends StatelessWidget {
             },
             icon: const Icon(FontAwesomeIcons.magnifyingGlass),
           ),
-
         ],
       ),
     );

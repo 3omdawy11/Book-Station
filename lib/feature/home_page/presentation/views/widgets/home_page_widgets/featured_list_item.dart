@@ -9,7 +9,7 @@ class HomePageListBookItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(AppRouter.kBookDetailScreen);
       },
       child: Padding(
@@ -17,15 +17,15 @@ class HomePageListBookItem extends StatelessWidget {
         child: SizedBox(
           //height: MediaQuery.of(context).size.height * 0.35,
           child: AspectRatio(
-            aspectRatio: 2.8/4,
+            aspectRatio: 2.8 / 4,
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.redAccent,
-                borderRadius: BorderRadius.circular(20),
-                image: const DecorationImage(
-                  fit: BoxFit.fill, image: AssetImage(AssetsData.image1),
-                )
-              ),
+                  color: Colors.redAccent,
+                  borderRadius: BorderRadius.circular(20),
+                  image: const DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage(AssetsData.image1),
+                  )),
             ),
           ),
         ),

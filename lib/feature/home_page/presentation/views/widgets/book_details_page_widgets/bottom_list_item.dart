@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../../../core/utils/assets.dart';
 import '../../../../../../core/utils/router.dart';
+
 class BottomListItem extends StatelessWidget {
   const BottomListItem({
     super.key,

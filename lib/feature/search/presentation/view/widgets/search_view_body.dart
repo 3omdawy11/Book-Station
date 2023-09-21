@@ -17,12 +17,16 @@ class SearchViewBody extends StatelessWidget {
         SizedBox(
           height: 30,
         ),
-        Align(alignment: Alignment.centerLeft ,child: Text('Search Result',style: Styles.textStyle18,)),
+        Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Search Result',
+              style: Styles.textStyle18,
+            )),
         SizedBox(
           height: 20,
         ),
         Expanded(child: SearchResultListView()),
-
       ],
     );
   }
@@ -38,6 +42,7 @@ class SearchResultListView extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         return const BookListViewItem();
       },
-    );;
+    );
+    ;
   }
 }

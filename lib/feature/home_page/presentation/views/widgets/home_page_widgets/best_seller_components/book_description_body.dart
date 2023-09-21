@@ -3,6 +3,7 @@ import 'book_description_components/book_author.dart';
 import 'book_description_components/book_name.dart';
 import 'book_description_components/book_price.dart';
 import 'book_description_components/book_rating.dart';
+
 class BookDescription extends StatelessWidget {
   const BookDescription({
     super.key,

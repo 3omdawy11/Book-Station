@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
-
 class SearchViewTextField extends StatelessWidget {
   const SearchViewTextField({
     super.key,

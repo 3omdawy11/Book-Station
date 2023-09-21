@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:book_station/core/utils/styles.dart';
+
 class BookAuthor extends StatelessWidget {
   const BookAuthor({
     super.key,
@@ -9,7 +10,7 @@ class BookAuthor extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       'J.K. Rowling', // Author
-      style: Styles.textStyle14.copyWith(color: Colors.grey,fontSize: 18),
+      style: Styles.textStyle14.copyWith(color: Colors.grey, fontSize: 18),
     );
   }
 }

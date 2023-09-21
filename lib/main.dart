@@ -1,11 +1,10 @@
 import 'package:book_station/core/utils/router.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'constants.dart';
-import 'feature/splash/presentation/views/splash_view.dart';
 
 void main() => runApp(const BookStation());
+
 class BookStation extends StatelessWidget {
   const BookStation({super.key});
 
@@ -15,13 +14,11 @@ class BookStation extends StatelessWidget {
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
-        appBarTheme: const AppBarTheme().copyWith(
-          backgroundColor: kScaffoldBackGroundColor,
-          elevation: 0
-        ),
-        scaffoldBackgroundColor: kScaffoldBackGroundColor
-      ),
+          textTheme:
+              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+          appBarTheme: const AppBarTheme().copyWith(
+              backgroundColor: kScaffoldBackGroundColor, elevation: 0),
+          scaffoldBackgroundColor: kScaffoldBackGroundColor),
     );
   }
 }

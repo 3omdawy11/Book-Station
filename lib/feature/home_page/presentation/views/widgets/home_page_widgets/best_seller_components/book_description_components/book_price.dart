@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:book_station/core/utils/styles.dart';
+
 class BookPrice extends StatelessWidget {
   const BookPrice({
     super.key,

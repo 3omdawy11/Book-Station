@@ -19,8 +19,8 @@ class BookDetailViewMiddleButton extends StatelessWidget {
           backgroundColor: const Color(0xffFFFFFF),
           label: Text(
             '19.99€',
-            style: Styles.textStyle18.copyWith(
-                fontWeight: FontWeight.bold, color: Colors.black),
+            style: Styles.textStyle18
+                .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
           ),
         ),
         CustomButton(
@@ -37,4 +37,3 @@ class BookDetailViewMiddleButton extends StatelessWidget {
     );
   }
 }
-

@@ -1,5 +1,6 @@
 import 'package:book_station/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+
 class SlidingText extends StatelessWidget {
   const SlidingText({
     super.key,
@@ -22,7 +23,6 @@ class SlidingText extends StatelessWidget {
           ),
         );
       },
-
     );
   }
 }
