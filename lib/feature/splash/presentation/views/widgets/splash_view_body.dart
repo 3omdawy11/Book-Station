@@ -1,8 +1,12 @@
+import 'package:book_station/core/utils/api_service.dart';
 import 'package:book_station/core/utils/assets.dart';
 import 'package:book_station/core/utils/router.dart';
+import 'package:book_station/feature/home_page/domain/entities/book_entity.dart';
 import 'package:book_station/feature/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:book_station/feature/home_page/data/data_sources/home_remote_data_source.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -20,6 +24,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
     super.initState();
     initSlideAnimation();
     navigateHome();
+    // Dio dio = Dio();
+    // ApiService a = ApiService(dio);
+    // HomeRemoteDataSourceImplementation h = HomeRemoteDataSourceImplementation(a);
+    // h.fetchFeaturedBooks();
   }
 
   @override
