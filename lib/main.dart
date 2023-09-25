@@ -1,9 +1,15 @@
 import 'package:book_station/core/utils/router.dart';
+import 'package:book_station/feature/home_page/domain/entities/book_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'constants.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() => runApp(const BookStation());
+void main() async{
+  runApp(const BookStation());
+  Hive.registerAdapter(BookEntityAdapter());
+  await Hive.openBox(kFeaturedBox);
+}
 
 class BookStation extends StatelessWidget {
   const BookStation({super.key});
