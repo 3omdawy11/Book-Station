@@ -6,9 +6,11 @@ import 'constants.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async{
-  runApp(const BookStation());
+  await Hive.initFlutter();
   Hive.registerAdapter(BookEntityAdapter());
-  await Hive.openBox(kFeaturedBox);
+  await Hive.openBox<BookEntity>(kFeaturedBox);
+  await Hive.openBox<BookEntity>(kNewestBox);
+  runApp(const BookStation());
 }
 
 class BookStation extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:book_station/constants.dart';
-import 'package:book_station/core/utils/functions/save_box.dart';
+import 'package:book_station/core/utils/functions/save_books.dart';
 import 'package:book_station/feature/home_page/data/models/book_model/book_model.dart';
 import '../../../../core/utils/api_service.dart';
 import '../../domain/entities/book_entity.dart';
@@ -29,7 +29,7 @@ class HomeRemoteDataSourceImplementation extends HomeRemoteDataSource {
     var data = await apiService.get(
         endPoint: 'volumes?Filtering=free-ebooks&q=programming&Sorting=newest');
     List<BookEntity> books = getBooksList(data);
-    saveBooksData(books, kFeaturedBox);
+    saveBooksData(books, kNewestBox);
 
     return books;
   }
