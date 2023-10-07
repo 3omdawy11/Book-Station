@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 
+import '../../../../domain/entities/book_entity.dart';
 import 'featured_list_item.dart';
 
 class FeaturedList extends StatelessWidget {
   const FeaturedList({
-    super.key,
+    super.key, required this.books,
   });
-
+  final List<BookEntity>books;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.28,
       child: ListView.builder(
-        itemCount: 10,
+        itemCount: books.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (
           BuildContext context,
           int index,
         ) {
-          return const HomePageListBookItem();
+          return HomePageListBookItem(image: books[index].image?? '');
         },
       ),
     );
