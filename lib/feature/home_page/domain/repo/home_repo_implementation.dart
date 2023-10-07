@@ -18,6 +18,7 @@ class HomeRepoImplementation extends HomeRepo {
       List<BookEntity> books;
       books = homeLocalDataSource.fetchFeaturedBooks();
       if (books.isNotEmpty) {
+        print('Iam cached');
         return right(books); // return if there is cached books
       }
       books =

@@ -18,33 +18,30 @@ class BookEntityAdapter extends TypeAdapter<BookEntity> {
     };
     return BookEntity(
       image: fields[1] as String?,
-      title: fields[0] as String?,
-      authorName: fields[2] as String?,
-      price: fields[3] as num?,
-      currency: fields[4] as String?,
-      averageRating: fields[5] as num?,
-      numberOfRatings: fields[6] as num?,
+      title: fields[2] as String,
+      authorName: fields[3] as String?,
+      price: fields[4] as num?,
+      rating: fields[5] as num?,
+      bookId: fields[0] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, BookEntity obj) {
     writer
-      ..writeByte(7)
+      ..writeByte(6)
       ..writeByte(0)
-      ..write(obj.title)
+      ..write(obj.bookId)
       ..writeByte(1)
       ..write(obj.image)
       ..writeByte(2)
-      ..write(obj.authorName)
+      ..write(obj.title)
       ..writeByte(3)
-      ..write(obj.price)
+      ..write(obj.authorName)
       ..writeByte(4)
-      ..write(obj.currency)
+      ..write(obj.price)
       ..writeByte(5)
-      ..write(obj.averageRating)
-      ..writeByte(6)
-      ..write(obj.numberOfRatings);
+      ..write(obj.rating);
   }
 
   @override
@@ -53,7 +50,7 @@ class BookEntityAdapter extends TypeAdapter<BookEntity> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is BookEntityAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
+          other is BookEntityAdapter &&
+              runtimeType == other.runtimeType &&
+              typeId == other.typeId;
 }

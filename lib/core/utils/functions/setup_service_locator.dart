@@ -13,7 +13,7 @@ void setupServiceLocator(){
       homeRemoteDataSource: HomeRemoteDataSourceImplementation(
         getIt.get<ApiService>(),
       ),
-      homeLocalDataSource: HomeLocalDataSourceImplementation(),
+      homeLocalDataSource: HomeLocalDataSourceImpl(),
     ),
   );
 }

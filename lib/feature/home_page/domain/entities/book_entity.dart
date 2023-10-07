@@ -1,29 +1,26 @@
 import 'package:hive/hive.dart';
 part 'book_entity.g.dart';
+
 @HiveType(typeId: 0)
 class BookEntity {
-
   @HiveField(0)
-  final String? title;
+  final String bookId;
   @HiveField(1)
   final String? image;
   @HiveField(2)
-  final String? authorName;
+  final String title;
   @HiveField(3)
-  final num? price;
+  final String? authorName;
   @HiveField(4)
-  final String? currency;
+  final num? price;
   @HiveField(5)
-  final num? averageRating;
-  @HiveField(6)
-  final num? numberOfRatings;
+  final num? rating;
 
   BookEntity(
       {required this.image,
-      required this.title,
-      required this.authorName,
-      required this.price,
-      required this.currency,
-      required this.averageRating,
-      required this.numberOfRatings});
+        required this.title,
+        required this.authorName,
+        required this.price,
+        required this.rating,
+        required this.bookId});
 }

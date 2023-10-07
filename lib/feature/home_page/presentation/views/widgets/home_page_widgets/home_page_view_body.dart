@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'featured_list_bloc_builder.dart';
 import 'home_page_app_bar.dart';
 import 'best_seller_list.dart';
-import 'featured_list.dart';
 import 'medium_text.dart';
 
 class HomePageViewBody extends StatelessWidget {
@@ -22,7 +21,7 @@ class HomePageViewBody extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   HomePageAppBar(),
-                  FeaturedList(),
+                  FeaturedListBlocBuilder(),
                   MediumText(),
                   BestSellerList()
                 ],
@@ -34,3 +33,4 @@ class HomePageViewBody extends StatelessWidget {
     );
   }
 }
+
