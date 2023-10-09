@@ -6,8 +6,8 @@ import 'best_seller_components/book_description_body.dart';
 import 'best_seller_components/book_picture.dart';
 
 class BookListViewItem extends StatelessWidget {
-  const BookListViewItem({super.key});
-
+  const BookListViewItem({super.key, required this.image});
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,8 +16,8 @@ class BookListViewItem extends StatelessWidget {
         onTap: () {
           GoRouter.of(context).push(AppRouter.kBookDetailScreen);
         },
-        child: const Row(
-          children: [BookPicture(), BookDescription()],
+        child: Row(
+          children: [BookPicture(image: image,), const BookDescription()],
         ),
       ),
     );

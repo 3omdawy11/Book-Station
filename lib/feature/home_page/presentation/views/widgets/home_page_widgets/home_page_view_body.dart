@@ -1,3 +1,4 @@
+import 'package:book_station/feature/home_page/presentation/views/widgets/home_page_widgets/best_seller_list_bloc_builder.dart';
 import 'package:flutter/material.dart';
 import 'featured_list_bloc_builder.dart';
 import 'home_page_app_bar.dart';
@@ -23,7 +24,7 @@ class HomePageViewBody extends StatelessWidget {
                   HomePageAppBar(),
                   FeaturedListBlocBuilder(),
                   MediumText(),
-                  BestSellerList()
+                  BestSellerListBlocBuilder(),
                 ],
               ),
             ),

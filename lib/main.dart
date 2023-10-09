@@ -43,7 +43,7 @@ class BookStation extends StatelessWidget {
           create: (context) {
             return NewestBooksCubit(
               FetchNewestBooksUseCase(getIt.get<HomeRepoImplementation>()),
-            );
+            )..fetchNewestBooks();
           },
         ),
       ],

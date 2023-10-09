@@ -1,4 +1,5 @@
 import 'package:book_station/core/utils/styles.dart';
+import 'package:book_station/feature/search/presentation/view/widgets/search_result_list_view_item.dart';
 import 'package:book_station/feature/search/presentation/view/widgets/search_view_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,7 @@ class SearchResultListView extends StatelessWidget {
     return ListView.builder(
       itemCount: 15,
       itemBuilder: (BuildContext context, int index) {
-        return const BookListViewItem();
+        return const SearchResultListViewItem();
       },
     );
     ;

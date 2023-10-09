@@ -13,16 +13,15 @@ class HomeRepoImplementation extends HomeRepo {
       {required this.homeRemoteDataSource, required this.homeLocalDataSource});
 
   @override
-  Future<Either<Failure, List<BookEntity>>> fetchFeaturedBooks() async {
+  Future<Either<Failure, List<BookEntity>>> fetchFeaturedBooks({int pageNumber = 0}) async {
     try {
       List<BookEntity> books;
-      books = homeLocalDataSource.fetchFeaturedBooks();
+      books = homeLocalDataSource.fetchFeaturedBooks(pageNumber: pageNumber);
       if (books.isNotEmpty) {
-        print('Iam cached');
         return right(books); // return if there is cached books
       }
       books =
-          await homeRemoteDataSource.fetchFeaturedBooks(); // get remote Books
+          await homeRemoteDataSource.fetchFeaturedBooks(pageNumber: pageNumber); // get remote Books
       return right(books);
     } catch (e) {
       return (e is DioError)
