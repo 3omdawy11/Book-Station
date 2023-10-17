@@ -1,6 +1,6 @@
 import 'package:book_station/feature/home_page/presentation/views/widgets/home_page_widgets/best_seller_list_bloc_builder.dart';
 import 'package:flutter/material.dart';
-import 'featured_list_bloc_builder.dart';
+import 'featured_list_bloc_consumer.dart';
 import 'home_page_app_bar.dart';
 import 'best_seller_list.dart';
 import 'medium_text.dart';
@@ -22,7 +22,7 @@ class HomePageViewBody extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   HomePageAppBar(),
-                  FeaturedListBlocBuilder(),
+                  FeaturedListBlocConsumer(),
                   MediumText(),
                   BestSellerListBlocBuilder(),
                 ],
