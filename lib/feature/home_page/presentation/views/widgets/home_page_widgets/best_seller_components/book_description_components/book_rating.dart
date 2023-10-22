@@ -3,8 +3,9 @@ import 'package:book_station/core/utils/styles.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating({
-    super.key,
+    super.key, required this.bookRating,
   });
+  final num bookRating;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class BookRating extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          '⭐4.8 ', // Rating
+          '⭐$bookRating', // Rating
           style: Styles.textStyle18.copyWith(fontSize: 16),
         ),
         Text(

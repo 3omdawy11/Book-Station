@@ -29,7 +29,7 @@ class BookDescription extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 BookPrice(),
-                BookRating(),
+                BookRating(bookRating: 8,),
               ],
             )
           ],

@@ -4,9 +4,9 @@ import '../../../../../../core/utils/styles.dart';
 
 class BookDetailsViewBookAuthor extends StatelessWidget {
   const BookDetailsViewBookAuthor({
-    super.key,
+    super.key, required this.authorName,
   });
-
+  final String authorName;
   @override
   Widget build(BuildContext context) {
     return Opacity(
