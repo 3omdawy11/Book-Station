@@ -1,3 +1,4 @@
+import 'package:book_station/feature/home_page/domain/entities/book_entity.dart';
 import 'package:book_station/feature/home_page/presentation/views/widgets/book_details_page_widgets/book_author.dart';
 import 'package:book_station/feature/home_page/presentation/views/widgets/book_details_page_widgets/book_details_view_middle_button.dart';
 import 'package:book_station/feature/home_page/presentation/views/widgets/book_details_page_widgets/custom_app_bar.dart';
@@ -9,38 +10,39 @@ import 'bottom_list.dart';
 import 'bottom_list_header.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
+  const BookDetailsViewBody({super.key, required this.book});
+  final BookEntity book;
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(bottom: 20),
+          padding: const EdgeInsets.only(bottom: 20),
           child: Column(
             children: [
-              CustomAppBar(),
-              BookMiddlePicture(),
-              BookName(),
-              SizedBox(
+              const CustomAppBar(),
+              BookMiddlePicture(bookImage : book.image ?? ''),
+              BookName(bookName : book.title ?? ''),
+              const SizedBox(
                 height: 6,
               ),
-              BookDetailsViewBookAuthor(),
-              SizedBox(
+              BookDetailsViewBookAuthor(bookAuthor : book.authorName ?? ''),
+              const SizedBox(
                 height: 16,
               ),
               //BookRating(),
-              BookRating(),
-              SizedBox(
+              BookRating(bookRating: book.rating ?? 6, bookRatingCount: book.ratingCount ?? 0),
+              const SizedBox(
                 height: 20,
               ),
-              BookDetailViewMiddleButton(),
-              Expanded(
+              BookDetailViewMiddleButton(bookPrice: book.price ?? 5),
+              const Expanded(
                 child: SizedBox(
                   height: 20,
                 ),
               ),
-              BottomListHeader(),
-              BottomList(),
+              const BottomListHeader(),
+              const BottomList(),
             ],
           ),
         ),

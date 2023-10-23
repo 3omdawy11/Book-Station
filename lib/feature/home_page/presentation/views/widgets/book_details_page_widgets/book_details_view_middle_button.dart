@@ -4,9 +4,9 @@ import '../../../../../../core/widgets/custom_button.dart';
 
 class BookDetailViewMiddleButton extends StatelessWidget {
   const BookDetailViewMiddleButton({
-    super.key,
+    super.key, required this.bookPrice,
   });
-
+  final num bookPrice;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -18,7 +18,7 @@ class BookDetailViewMiddleButton extends StatelessWidget {
           onPressed: () {},
           backgroundColor: const Color(0xffFFFFFF),
           label: Text(
-            '19.99€',
+            (bookPrice == 0.0) ? 'FREE' : '$bookPrice€',
             style: Styles.textStyle18
                 .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
           ),

@@ -3,13 +3,14 @@ import 'package:book_station/core/utils/styles.dart';
 
 class BookPrice extends StatelessWidget {
   const BookPrice({
-    super.key,
+    super.key, required this.bookPrice,
   });
+  final num bookPrice;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      '19.99 €', // Price
+      bookPrice == 0.0 ? 'FREE' : '$bookPrice€', // Price
       style: Styles.textStyle18.copyWith(
         fontSize: 20,
         fontWeight: FontWeight.bold,

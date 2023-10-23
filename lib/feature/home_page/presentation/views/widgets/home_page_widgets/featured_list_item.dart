@@ -11,23 +11,22 @@ class HomePageListBookItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kBookDetailScreen,
-        );
+        GoRouter.of(context)
+            .push(AppRouter.kBookDetailScreen, extra: bookDetails);
       },
       child: Padding(
         padding: const EdgeInsets.only(right: 15),
         child: SizedBox(
-          //height: MediaQuery.of(context).size.height * 0.35,
-          child: AspectRatio(
-            aspectRatio: 2.8 / 4,
-            child: ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: CachedNetworkImage(imageUrl: bookDetails.image ?? '', fit: BoxFit.fill,))
-            )
-
-
-          ),
-        ),
-      );
+            //height: MediaQuery.of(context).size.height * 0.35,
+            child: AspectRatio(
+                aspectRatio: 2.8 / 4,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: CachedNetworkImage(
+                      imageUrl: bookDetails.image ?? '',
+                      fit: BoxFit.fill,
+                    )))),
+      ),
+    );
   }
 }

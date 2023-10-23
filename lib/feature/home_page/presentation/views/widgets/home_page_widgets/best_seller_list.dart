@@ -12,7 +12,7 @@ class BestSellerList extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemBuilder: (BuildContext context, int index) {
-        return BookListViewItem(image: books[index].image ?? '',);
+        return BookListViewItem(book: books[index],);
       },
     );
   }

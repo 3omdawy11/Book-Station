@@ -1,3 +1,4 @@
+import 'package:book_station/feature/home_page/domain/entities/book_entity.dart';
 import 'package:book_station/feature/search/presentation/view/search_view.dart';
 import 'package:go_router/go_router.dart';
 import '../../feature/home_page/presentation/views/book_details_view.dart';
@@ -20,7 +21,9 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kBookDetailScreen,
-        builder: (context, state) => const BookDetailsView(),
+        builder: (context, state) => BookDetailsView(
+          book: state.extra as BookEntity
+        ),
       ),
       GoRoute(
         path: kSearchScreen,

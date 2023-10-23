@@ -3,9 +3,10 @@ import 'package:book_station/feature/home_page/presentation/views/widgets/book_d
 import 'package:flutter/material.dart';
 
 class BookDetailsView extends StatelessWidget {
-  const BookDetailsView({super.key});
+  const BookDetailsView({super.key, required this.book});
+  final BookEntity book;
   @override
   Widget build(BuildContext context) {
-    return const BookDetailsViewBody();
+    return BookDetailsViewBody(book : book);
   }
 }
