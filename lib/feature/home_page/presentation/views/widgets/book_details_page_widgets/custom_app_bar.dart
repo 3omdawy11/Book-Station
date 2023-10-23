@@ -15,6 +15,7 @@ class CustomAppBar extends StatelessWidget {
           IconButton(
               onPressed: () {
                 GoRouter.of(context).pop();
+                //Navigator.of(context).pop();
               },
               icon: const Icon(CupertinoIcons.xmark)),
           IconButton(
